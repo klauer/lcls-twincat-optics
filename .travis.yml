@@ -15,4 +15,4 @@ env:
 #    - name: "Python 3.6 - PIP"
 
 import:
-  - klauer/pcds-ci-helpers:travis/shared_configs/twincat/standard.yml
+  - klauer/pcds-ci-helpers:travis/shared_configs/twincat/standard.yml@twincat_shared_configs
