@@ -1,26 +1,21 @@
-language: python
-python: 3.7
-sudo: false
+version: ~> 1.0
 
 env:
   global:
-      # Doctr deploy key for pcdshub/lcls-twincat-optics
-      - secure: "lWQrdGr9GMk96tooHnPViOL+x+Qjg8vCrhBpMJxR585GX8sxH81PWcFOGcG4jMY3ZskEvg0bSwacvy3EunS9dnVcIB99qZ18J58ogXEMZkwTYC9cIqeT/r7FAd+IdcgYijB+dnzKzMcT7jExSPDez3rKlCcaT6QJB3XNWRvWFohugLtsAGnkSudbX6Jm8jTwwdN2ADlLfOJ9dGSEVA6cA0rxOyEwb2sUAPlRvaj+mrY0QWELGjoM/L6VsXBgSdjymiprqlTyGALmeENCPQSTYzWaKGuDnaxV8kuQcd8xzNnMepbDk2h7e3E4fupGj3P64CPoJHCB+/bUM9x6TVWme+iidewjOG5jvsrIHjO8PuSbky893SFIdy3kWUl6xBuEhM6TGHd2ebf3FgkJPacpsaAIC0786eKHgTaHwo4BXFRHi5G6N4ws49mp8PLl2v8sy//pYTDTQWvBBliyNw77d7sOq2luSVee5L+ONjd/oH8olWXFYD/q+f7gMwlcyaAQA+iLaTmgXZHf/gvnWRb9IaB+7mJGgjGPGWWZhuM6OPti0fuQ7sA1GPqQ0fzBnrBZSD2PxLI5i0w56YMZBCTxe9Hxi3cPY/rHfBDmASMhiKybaTX3pSn54APqPntmdmBSIOzySldqF8ICHUAJUwJrsYxklT01Qi7VOasBdrr+kV4="
+    # Doctr deploy key for **** NOTE **** klauer/lcls-twincat-optics
+    - secure: "r4R/5EkAu1aNqFI03XINuq/gn9jZpZz23i1VhDHhu3SCxM+AcW2V+Gu5lu/qYNgrUnfKVATIRoEaBGoPA30fXDnhN/CVvWScPHGB6BoxJ/SYhqKD64zNbv0VVoNpn/Ko/jTpGE9fn2xK2h0TFOeNVxZfmUE13yLLMShxZhmNN/D19XNiVtEysIvG4t65NXh+ouS4T6hCWDEj5IZObeA28tQDYrl13LFzEacrcM6ocWkYXtU1+nCWCvgqkBwEXGav2qnV0Evcp+/RGmY0F1p/ZXpQX6YekDAWE6zrkUXrJAbiAvYP22cHlxUKtSSL3t3M/x98DhtfkFu01B9icOZuqANGV5+dmp7vmwdRqTdTWC9oYjdFF9rhyc/73/uSsUGwtZM6u/Lgt3LGzqoq1BJFVmpcBRzeey3GuOQX9ePltZQglsed+f7fGtkuZjqT51WFSHh9zDsknuNqszeeeOcvd7kG/3rIGjcrbE+dVQ6ploHSBbaga9DGlTZJemXDETNNeb4GNSa4AVi2bqYKffgY/MRCqNdnXhnP+7nvlcCdXiV5PQ8WZg2hgIhXbKhaDN+4XZGrXrhQ69DrDS5dAoJJ7FJW/XJJp//ykIL9Ke0qzdaItdWdBIKsa1VNg2+FKs23YDbEg+n57l7PYlL5qxYqLRcmQO6j71BpgLgzScejGvo="
 
-matrix:
-  include:
-    - name: Project summary
-      python: 3.7
-      env: TWINCAT_SUMMARY=1
-    - name: Pragma linting
-      python: 3.7
-      env: TWINCAT_PRAGMALINT=1
-    - name: Documentation building
-      python: 3.7
-      env: TWINCAT_BUILD_DOCS=1
+    # enable the usage of versions menu which allow versioning of the docs
+    # pages and not only the master branch
+    - DOCTR_VERSIONS_MENU="1"
+    - TWINCAT_STYLE_EXCLUDE=tc_mca_std_lib
+    - CI_HELPER_URL=https://github.com/klauer/pcds-ci-helpers
+    - CI_HELPER_BRANCH=twincat_shared_configs
 
-install:
-  # Import the helper scripts
-  - git clone --depth 1 git://github.com/pcdshub/pcds-ci-helpers.git
-  # Start the helper-script initialization + run based on environment variables
-  - source pcds-ci-helpers/travis/init.sh
+# Uncomment this block if you would like to make a test an allowed failure
+jobs:
+  allow_failures:
+    - name: "Style Check"
+
+import:
+  - klauer/pcds-ci-helpers:travis/shared_configs/twincat/standard.yml@twincat_shared_configs
