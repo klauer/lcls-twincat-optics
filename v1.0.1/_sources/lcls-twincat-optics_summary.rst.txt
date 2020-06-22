@@ -1,0 +1,181 @@
+
+Summary
+-------
+
+Pragma Summary
+^^^^^^^^^^^^^^
+
+.. csv-table::
+    :header: PLC Name, Total Pragmas, Errors
+    :align: center
+
+    :ref:`lcls_twincat_optics_plc <lcls_twincat_optics_plc_pragmas>`, 21, 0
+
+NC Settings
+^^^^^^^^^^^
+
+.. csv-table::
+    :header: Axis ID, Name
+    :align: center
+
+        1, Axis 1
+        2, TestPitch_LimitSwitches
+        3, Axis 2
+        4, Axis 3
+        5, Axis 4
+        6, Axis 5
+        7, Axis 6
+
+
+
+Axis 1: Axis 1
+""""""""""""""
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 1
+    Name, Axis 1
+    AxisType, 1
+    CreateSymbols, true
+    Enc:EncType, 1
+    Id, 1
+    OtherSettings:AllowMotionCmdToSlave, true
+
+
+
+Axis 2: TestPitch_LimitSwitches
+"""""""""""""""""""""""""""""""
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 2
+    Name, TestPitch_LimitSwitches
+    AxisFolder, TestAxes
+    AxisType, 1
+    CreateSymbols, true
+    Enc:EncType, 1
+    Id, 2
+    OtherSettings:AllowMotionCmdToSlave, true
+
+
+
+Axis 3: Axis 2
+""""""""""""""
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 3
+    Name, Axis 2
+    AxisType, 1
+    CreateSymbols, true
+    Enc:EncType, 1
+    Id, 3
+    OtherSettings:AllowMotionCmdToSlave, true
+
+
+
+Axis 4: Axis 3
+""""""""""""""
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 4
+    Name, Axis 3
+    AxisType, 1
+    CreateSymbols, true
+    Enc:EncType, 1
+    Id, 4
+    OtherSettings:AllowMotionCmdToSlave, true
+
+
+
+Axis 5: Axis 4
+""""""""""""""
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 5
+    Name, Axis 4
+    AxisType, 1
+    CreateSymbols, true
+    Enc:EncType, 1
+    Id, 5
+    OtherSettings:AllowMotionCmdToSlave, true
+
+
+
+Axis 6: Axis 5
+""""""""""""""
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 6
+    Name, Axis 5
+    AxisType, 1
+    CreateSymbols, true
+    Enc:EncType, 1
+    Id, 6
+    OtherSettings:AllowMotionCmdToSlave, true
+
+
+
+Axis 7: Axis 6
+""""""""""""""
+
+.. csv-table::
+    :header: Setting, Value
+    :align: center
+
+    Axis ID, 7
+    Name, Axis 6
+    AxisType, 1
+    CreateSymbols, true
+    Enc:EncType, 1
+    Id, 7
+    OtherSettings:AllowMotionCmdToSlave, true
+
+
+
+Boxes
+^^^^^
+
+
+Links
+^^^^^
+
+.. raw:: html
+
+   <details>
+        <summary>12 Links</summary>
+.. csv-table::
+    :header: Owner A, Item A, Owner B, Item B
+    :align: center
+
+        lcls_twincat_optics_plc Instance, PlcTask Inputs^Main.M1.Axis.NcToPlc, TINC^NC-Task 1 SAF^Axes^Axis 1, Outputs^ToPlc
+        lcls_twincat_optics_plc Instance, PlcTask Inputs^Main.M2.Axis.NcToPlc, TINC^NC-Task 1 SAF^Axes^Axis 2, Outputs^ToPlc
+        lcls_twincat_optics_plc Instance, PlcTask Inputs^Main.M3.Axis.NcToPlc, TINC^NC-Task 1 SAF^Axes^Axis 3, Outputs^ToPlc
+        lcls_twincat_optics_plc Instance, PlcTask Inputs^Main.M4.Axis.NcToPlc, TINC^NC-Task 1 SAF^Axes^Axis 4, Outputs^ToPlc
+        lcls_twincat_optics_plc Instance, PlcTask Inputs^Main.M5.Axis.NcToPlc, TINC^NC-Task 1 SAF^Axes^Axis 5, Outputs^ToPlc
+        lcls_twincat_optics_plc Instance, PlcTask Inputs^Main.M6.Axis.NcToPlc, TINC^NC-Task 1 SAF^Axes^Axis 6, Outputs^ToPlc
+        lcls_twincat_optics_plc Instance, PlcTask Outputs^Main.M1.Axis.PlcToNc, TINC^NC-Task 1 SAF^Axes^Axis 1, Inputs^FromPlc
+        lcls_twincat_optics_plc Instance, PlcTask Outputs^Main.M2.Axis.PlcToNc, TINC^NC-Task 1 SAF^Axes^Axis 2, Inputs^FromPlc
+        lcls_twincat_optics_plc Instance, PlcTask Outputs^Main.M3.Axis.PlcToNc, TINC^NC-Task 1 SAF^Axes^Axis 3, Inputs^FromPlc
+        lcls_twincat_optics_plc Instance, PlcTask Outputs^Main.M4.Axis.PlcToNc, TINC^NC-Task 1 SAF^Axes^Axis 4, Inputs^FromPlc
+        lcls_twincat_optics_plc Instance, PlcTask Outputs^Main.M5.Axis.PlcToNc, TINC^NC-Task 1 SAF^Axes^Axis 5, Inputs^FromPlc
+        lcls_twincat_optics_plc Instance, PlcTask Outputs^Main.M6.Axis.PlcToNc, TINC^NC-Task 1 SAF^Axes^Axis 6, Inputs^FromPlc
+
+.. raw:: html
+
+   </details>
