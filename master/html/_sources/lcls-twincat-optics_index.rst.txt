@@ -1,0 +1,29 @@
+lcls-twincat-optics.tsproj Documentation
+----------------------------------------
+
+.. toctree::
+    :maxdepth: 2
+    :caption: Contents:
+
+    lcls-twincat-optics_summary
+    lcls-twincat-optics_lcls_twincat_optics_plc_summary
+    lcls-twincat-optics_lcls_twincat_optics_plc_epics
+    lcls-twincat-optics_lcls_twincat_optics_plc_source
+
+
+Pragma Summary
+--------------
+
+.. csv-table::
+    :header: PLC Name, Total Pragmas, Errors
+    :align: center
+
+    :ref:`lcls_twincat_optics_plc <lcls_twincat_optics_plc_pragmas>`, 21, 0
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
