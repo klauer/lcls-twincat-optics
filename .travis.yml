@@ -8,9 +8,6 @@ env:
     # enable the usage of versions menu which allow versioning of the docs
     # pages and not only the master branch
     - DOCTR_VERSIONS_MENU="1"
-    - TWINCAT_STYLE_EXCLUDE=tc_mca_std_lib
-    - CI_HELPER_URL=https://github.com/klauer/pcds-ci-helpers
-    - CI_HELPER_BRANCH=twincat_shared_configs
 
 # Uncomment this block if you would like to make a test an allowed failure
 jobs:
@@ -19,4 +16,4 @@ jobs:
     - name: "Pre-commit Checks"
 
 import:
-  - klauer/pcds-ci-helpers:travis/shared_configs/twincat/standard.yml@twincat_shared_configs
+  - pcdshub/pcds-ci-helpers:travis/shared_configs/twincat/standard.yml
