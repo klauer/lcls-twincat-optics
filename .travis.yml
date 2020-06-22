@@ -11,9 +11,9 @@ env:
     - TWINCAT_STYLE_EXCLUDE=tc_mca_std_lib
 
 # Uncomment this block if you would like to make a test an allowed failure
-#jobs:
-#  allow_failures:
-#    - name: "Python 3.6 - PIP"
+jobs:
+  allow_failures:
+    - name: "Style Check"
 
 import:
   - klauer/pcds-ci-helpers:travis/shared_configs/twincat/standard.yml@twincat_shared_configs
