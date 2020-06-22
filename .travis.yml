@@ -9,6 +9,8 @@ env:
     # pages and not only the master branch
     - DOCTR_VERSIONS_MENU="1"
     - TWINCAT_STYLE_EXCLUDE=tc_mca_std_lib
+    - CI_HELPER_URL=https://github.com/klauer/pcds-ci-helpers
+    - CI_HELPER_BRANCH=twincat_shared_configs
 
 # Uncomment this block if you would like to make a test an allowed failure
 jobs:
